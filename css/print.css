@@ -1,0 +1,47 @@
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  body {
+    color: var(--text-inverse);
+    background: var(--bg-inverse);
+  }
+
+  .preloader,
+  .site-header,
+  .context-cursor,
+  .project-contact__actions,
+  .project-form-wrap,
+  .scroll-cue {
+    display: none !important;
+  }
+
+  [data-reveal],
+  .text-reveal > span,
+  .media-reveal {
+    opacity: 1 !important;
+    clip-path: none !important;
+    transform: none !important;
+  }
+
+  .section,
+  .site-footer {
+    color: var(--text-inverse) !important;
+    background: var(--bg-inverse) !important;
+    break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: var(--text-caption);
+  }
+}
+

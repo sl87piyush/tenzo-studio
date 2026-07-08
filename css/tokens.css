@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "Tenzo Studio";
+  src: url("/assets/fonts/TenzoStudio_Perfect.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Background */
+  --bg-primary: #0a0a0b;
+  --bg-secondary: #171719;
+  --bg-tertiary: #222225;
+  --bg-inverse: #f1efe8;
+  --bg-overlay: rgba(10, 10, 11, 0.88);
+  --ink-alpha-20: rgba(10, 10, 11, 0.2);
+  --ink-alpha-28: rgba(10, 10, 11, 0.28);
+  --ink-alpha-66: rgba(10, 10, 11, 0.66);
+
+  /* Text */
+  --text-primary: #f4f3ef;
+  --text-secondary: #c8c7c2;
+  --text-muted: #a7a7a2;
+  --text-accent: #dfff3f;
+  --text-inverse: #0a0a0b;
+
+  /* Accent / Brand */
+  --accent-primary: #dfff3f;
+  --accent-hover: #e8ff73;
+  --accent-active: #b9d52f;
+  --accent-surface: rgba(223, 255, 63, 0.26);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(244, 243, 239, 0.12);
+  --border-default: rgba(244, 243, 239, 0.2);
+  --border-strong: #f4f3ef;
+
+  /* Status */
+  --success: #55d187;
+  --warning: #f2c94c;
+  --error: #ff5c5c;
+  --success-surface: rgba(85, 209, 135, 0.22);
+  --error-surface: rgba(255, 92, 92, 0.18);
+
+  /* Media scrims */
+  --scrim-bottom: linear-gradient(180deg, rgba(10, 10, 11, 0) 42%, rgba(10, 10, 11, 0.82) 100%);
+  --scrim-full: linear-gradient(180deg, rgba(10, 10, 11, 0.12) 0%, rgba(10, 10, 11, 0.68) 100%);
+
+  /* Font stack */
+  --font-heading: var(--font-tenzo-studio), "Tenzo Studio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: var(--font-heading);
+  --font-body: var(--font-tenzo-studio), "Tenzo Studio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* Type scale */
+  --text-display-xl: clamp(4.75rem, 11vw, 10.5rem);
+  --text-display-lg: clamp(3.25rem, 6.6vw, 6.75rem);
+  --text-display-md: clamp(2.25rem, 4vw, 4.25rem);
+  --text-heading-lg: clamp(1.75rem, 2.5vw, 2.5rem);
+  --text-heading-md: clamp(1.25rem, 1.65vw, 1.5rem);
+  --text-body-lg: clamp(1.125rem, 1.25vw, 1.25rem);
+  --text-body-md: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.8125rem;
+  --text-overline: 0.75rem;
+  --text-wordmark: clamp(6rem, 24vw, 24rem);
+
+  /* Line heights */
+  --leading-tight: 0.88;
+  --leading-display: 0.92;
+  --leading-heading: 1.02;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Letter spacing */
+  --tracking-tight: -0.055em;
+  --tracking-display: -0.045em;
+  --tracking-heading: -0.03em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.12em;
+
+  /* Weight */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-11: 10rem;
+  --space-12: 13.75rem;
+  --space-section: clamp(6rem, 12vw, 13.75rem);
+  --space-section-compact: clamp(4.5rem, 8vw, 10rem);
+
+  /* Layout */
+  --page-max-width: 100rem;
+  --page-gutter: clamp(1.5rem, 5vw, 5rem);
+  --content-max-width: 62ch;
+  --content-narrow-width: 48ch;
+  --grid-columns: 12;
+  --grid-gap: clamp(1rem, 1.5vw, 1.5rem);
+  --header-height: 5rem;
+  --header-height-scrolled: 4.5rem;
+  --header-height-mobile: 4rem;
+  --hero-min-height: 100svh;
+  --hero-stage-height: 120svh;
+  --sticky-stage-height: 300vh;
+  --sticky-stage-height-tablet: 220vh;
+
+  /* Lines and geometry */
+  --line-thin: 1px;
+  --line-medium: 2px;
+  --icon-sm: 1rem;
+  --icon-md: 1.25rem;
+  --cursor-size: 4.5rem;
+  --fragment-border: var(--line-thin);
+  --media-aspect-landscape: 3 / 2;
+  --media-aspect-wide: 16 / 9;
+  --media-aspect-portrait: 4 / 5;
+
+  /* Easing */
+  --ease-default: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-linear: linear;
+
+  /* Durations */
+  --duration-instant: 120ms;
+  --duration-none: 0ms;
+  --duration-hold: 100ms;
+  --duration-fast: 200ms;
+  --duration-button: 300ms;
+  --duration-menu-exit: 400ms;
+  --duration-image-hover: 450ms;
+  --duration-menu: 600ms;
+  --duration-medium: 700ms;
+  --duration-slow: 900ms;
+  --duration-counter: 1100ms;
+  --duration-loading: 1400ms;
+  --duration-page-out: 450ms;
+  --duration-page-in: 650ms;
+  --duration-reduced: 150ms;
+  --stagger-delay: 40ms;
+  --stagger-section: 80ms;
+  --stagger-card: 120ms;
+  --stagger-menu: 50ms;
+
+  /* Motion distances */
+  --motion-distance-sm: 0.5rem;
+  --motion-distance-md: 1.5rem;
+  --motion-distance-lg: 3rem;
+  --motion-signal-shift: 0.5rem;
+  --motion-image-scale: 1.04;
+  --studio-parallax-shift: 4px;
+  --studio-parallax-rotation: 0.4deg;
+
+  /* Scroll behavior */
+  --scroll-offset: 0px 0px -20% 0px;
+  --scroll-threshold: 0.2;
+  --nav-scroll-threshold: 48px;
+  --nav-active-root-margin: -40% 0px -50% 0px;
+  --nav-active-threshold: 0;
+
+  /* Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1.25rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 24px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 1px 0 rgba(255, 255, 255, 0.07), 0 18px 48px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 2px 0 rgba(255, 255, 255, 0.08), 0 36px 96px rgba(0, 0, 0, 0.44);
+  --shadow-glow: 0 0 0 1px rgba(223, 255, 63, 0.35), 0 0 32px rgba(223, 255, 63, 0.14);
+
+  /* Controls */
+  --control-height-sm: 2.75rem;
+  --control-height-md: 3.25rem;
+  --control-height-lg: 3.75rem;
+  --field-min-height: 3.5rem;
+  --textarea-min-height: 10rem;
+  --form-collapse-duration: 500ms;
+  --focus-offset: 0.25rem;
+  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-primary);
+
+  /* Z-index */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-cursor: 400;
+  --z-preloader: 500;
+}
