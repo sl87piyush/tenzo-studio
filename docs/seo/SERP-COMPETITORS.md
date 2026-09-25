@@ -1,0 +1,22 @@
+# Jodhpur search results and competitor page types
+
+**Sample:** 26 September 2026 IST, Google desktop browser at 1280 × 720, `gl=in&hl=en`; Google footer localized the IP to Khema-Ka-Kuwa, Jodhpur, Rajasthan. SERPs change by time, device, location, and personalization. The examples below are observations from one sample, not stable rankings or search-volume estimates. TENZO's rank was not verified. Mobile results remain unmeasured.
+
+| Query and source | Organic page pattern | Separately observed local pack | TENZO decision |
+|---|---|---|---|
+| [website design company in jodhpur](https://www.google.com/search?q=website+design+company+in+jodhpur&gl=in&hl=en) | Local service pages and city pages, agency homepages, Justdial; examples included Digital Suncity, Adiyogi Technosoft, CssFounder, Kashi Digital Agency, and Websitevale | Teckey Digital Solutions, Digital Suncity, PHEUNIX | Build one detailed website design page rooted in genuine Jodhpur operation, with clear process, scope, and enquiry path |
+| [social media marketing agency in jodhpur](https://www.google.com/search?q=social+media+marketing+agency+in+jodhpur&gl=in&hl=en) | Local social service pages, agency homepages, directories, social profiles; examples included Ripple Media, Digital Socialite, Tryksha | Bluecity Marketers, Digiwish, Teckey | One social systems page; explain exactly which management/campaign work is in scope |
+| [branding agency in jodhpur](https://www.google.com/search?q=branding+agency+in+jodhpur&gl=in&hl=en) and [brand identity design jodhpur](https://www.google.com/search?q=brand+identity+design+jodhpur&gl=in&hl=en) | Branding service pages, design studios, agency homepages, directories/listicles; examples included Brandlogg, Ripple Media, Insanity Saint Designs | Branding agency: Bluecity Marketers, Teckey, Digiwish. Brand identity: Desidesigner, Insanity Saint Designs, Voguely Pixel | One brand identity page; answer agency-intent language naturally while describing TENZO accurately as a studio |
+| [digital marketing agency in jodhpur](https://www.google.com/search?q=digital+marketing+agency+in+jodhpur&gl=in&hl=en) | Broad agency homepages, city pages, directories and listicles; examples included Yug Technology, M.R Media, Ripple Media | Bluecity Marketers, Digiwish, Teckey | Lower priority. Searchers may expect SEO/PPC/full-service delivery; avoid unsupported breadth and a generic “agency” page |
+| `social media management jodhpur` | Management service pages and directories, including SomSkillTech, Digital Vayapari, Tryksha | Mediagarh, The Social Creators, Social Media Institute | Keep on social systems page until TENZO verifies ongoing management capacity and a distinct buyer need |
+
+The sampled web, brand, and social SERPs each showed service-specific pages and directory results. Several had AI Overview and “People also ask” boxes, including pricing/scope questions. This supports pages that state the problem, deliverables, process, scope boundaries, and next step. It does **not** prove any guaranteed ranking, AI citation, or rich-result outcome.
+
+Representative observed pages for structure review: [DigiNoryx](https://diginoryx.com/), [Ripple Media](https://ripplemedia.co.in/), [Signull](https://www.signull.in/), [OYG Studio](https://www.oyg.studio/), [Social Baazi](https://www.socialbaazi.in/), and [Technix social media management](https://technixinfotech.com/social-media-management-in-jodhpur). These are competing page examples, not audited traffic or authority benchmarks.
+
+## Competitive content gaps to use ethically
+
+- TENZO has no approved client case studies in the supplied material. Add named work only with permission, screenshots, specific scope, and measured outcomes with dates. Current homepage “systems” are explicitly conceptual.
+- Competitor pages often compete as broad agencies. TENZO can differentiate with precise website/brand/product process and a narrower, truthful scope. This is a positioning hypothesis to test through qualified enquiries.
+- Directory and Maps results matter locally, but web organic and local-pack visibility are different surfaces. TENZO's Google Business Profile and in-person eligibility were not verified, so no Maps rank or target is asserted.
+- No paid keyword data was available. “High/medium” competition labels in the matrix are qualitative judgments based on the observed mix of local service pages, directories, and broad agencies.

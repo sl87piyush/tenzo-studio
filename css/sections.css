@@ -1856,3 +1856,19 @@
     display: block;
   }
 }
+.seo-home-links {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) minmax(0, 3fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  padding-block: clamp(4rem, 7vw, 7rem);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.seo-home-links > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; }
+.seo-home-links a { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--border-default); font-size: clamp(1.15rem, 1.5vw, 1.5rem); }
+.seo-home-links a:hover, .seo-home-links a:focus-visible { color: var(--text-accent); }
+
+@media (max-width: 850px) {
+  .seo-home-links { grid-template-columns: 1fr; }
+  .seo-home-links > div { grid-template-columns: 1fr; }
+}

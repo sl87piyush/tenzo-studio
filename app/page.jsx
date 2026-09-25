@@ -202,7 +202,7 @@ export default function HomePage() {
               <span>Built for clarity.<br />Engineered for consequence.</span>
             </h2>
             <p className="systems__intro type-body-lg text-secondary" data-reveal>
-              Three examples of how TENZO connects strategy, visual systems, engineering, and AI. Each begins with the problem—not the deliverable.
+              Three conceptual system studies showing how TENZO connects strategy, visual systems, engineering, and AI. These illustrate our approach, not client case studies.
             </p>
           </header>
       
@@ -566,6 +566,16 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <div className="container seo-home-links" aria-label="Explore TENZO services">
+          <p className="type-overline text-accent">EXPLORE THE DISCIPLINES</p>
+          <div>
+            <a href="/services/website-design-jodhpur/">Website Design in Jodhpur <span aria-hidden="true">↗</span></a>
+            <a href="/services/brand-identity-jodhpur/">Brand Identity in Jodhpur <span aria-hidden="true">↗</span></a>
+            <a href="/services/social-media-jodhpur/">Social Media Systems in Jodhpur <span aria-hidden="true">↗</span></a>
+            <a href="/services/product-design-ai-mvps/">Product Design &amp; AI MVPs <span aria-hidden="true">↗</span></a>
+            <a href="/services/visual-motion-design/">Visual &amp; Motion Design <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
       </section>
       
       
@@ -749,7 +759,7 @@ export default function HomePage() {
       
           <footer className="studio__footer">
             <p className="type-heading-lg">Clarity. Craft. Speed. In that order.</p>
-            <a className="section-link type-caption" href="#principles"><span>Read the Studio Standard</span><span aria-hidden="true">↗</span></a>
+            <a className="section-link type-caption" href="/about/"><span>Read the Studio Standard</span><span aria-hidden="true">↗</span></a>
           </footer>
         </div>
       </section>
@@ -869,17 +879,17 @@ export default function HomePage() {
             <div className="site-footer__column site-footer__column--build" data-reveal>
               <h2 className="site-footer__heading type-overline">Build</h2>
               <ul className="site-footer__links">
-                <li>Product Architecture &amp; AI MVPs</li>
-                <li>Digital Infrastructure</li>
-                <li>Visual &amp; Motion Engineering</li>
-                <li>Brand Ecosystems</li>
-                <li>Growth Architecture</li>
+                <li><a href="/services/product-design-ai-mvps/">Product Architecture &amp; AI MVPs</a></li>
+                <li><a href="/services/website-design-jodhpur/">Digital Infrastructure</a></li>
+                <li><a href="/services/visual-motion-design/">Visual &amp; Motion Engineering</a></li>
+                <li><a href="/services/brand-identity-jodhpur/">Brand Ecosystems</a></li>
+                <li><a href="/services/social-media-jodhpur/">Growth Architecture</a></li>
               </ul>
             </div>
             <div className="site-footer__column site-footer__column--markets" data-reveal>
               <h2 className="site-footer__heading type-overline">Operating across</h2>
               <p>US / UK / UAE / SPAIN / FRANCE / NEW ZEALAND / CANADA / INDIA</p>
-              <a className="text-link" href="https://tenzostudio.com" rel="home">TENZOSTUDIO.COM</a>
+              <a className="text-link" href="https://www.tenzostudio.com" rel="home">TENZOSTUDIO.COM</a>
             </div>
           </div>
       

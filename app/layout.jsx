@@ -20,13 +20,12 @@ const tenzoStudio = localFont({
   preload: true,
 });
 
-const title =
-  "TENZO STUDIO — Premium Digital Products, Websites, Brand Systems & AI";
+const title = "TENZO STUDIO | Website Design, Brand Systems & AI in Jodhpur";
 const description =
-  "TENZO builds premium digital presence and intelligent systems for businesses that refuse to look average.";
+  "TENZO STUDIO is a Jodhpur-based digital studio building websites, brand systems, product experiences, and intelligent workflows for ambitious businesses.";
 
 export const metadata = {
-  metadataBase: new URL("https://tenzostudio.com"),
+  metadataBase: new URL("https://www.tenzostudio.com"),
   title,
   description,
   robots: {
@@ -85,20 +84,19 @@ export const viewport = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "Organization",
+  "@id": "https://www.tenzostudio.com/#organization",
   name: "TENZO STUDIO",
-  url: "https://tenzostudio.com/",
+  url: "https://www.tenzostudio.com/",
   description,
   slogan: "Cut the Noise. Set the Standard.",
   founder: {
     "@type": "Person",
     name: "Piyush",
   },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Jodhpur",
-    addressRegion: "Rajasthan",
-    addressCountry: "IN",
+  location: {
+    "@type": "Place",
+    name: "Jodhpur, Rajasthan, India",
   },
 };
 

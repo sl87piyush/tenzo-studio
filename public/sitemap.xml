@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tenzostudio.com/</loc>
+    <loc>https://www.tenzostudio.com/</loc>
+  </url>
+  <url>
+    <loc>https://www.tenzostudio.com/about/</loc>
+  </url>
+  <url>
+    <loc>https://www.tenzostudio.com/services/website-design-jodhpur/</loc>
+  </url>
+  <url>
+    <loc>https://www.tenzostudio.com/services/brand-identity-jodhpur/</loc>
+  </url>
+  <url>
+    <loc>https://www.tenzostudio.com/services/social-media-jodhpur/</loc>
+  </url>
+  <url>
+    <loc>https://www.tenzostudio.com/services/product-design-ai-mvps/</loc>
+  </url>
+  <url>
+    <loc>https://www.tenzostudio.com/services/visual-motion-design/</loc>
   </url>
 </urlset>
