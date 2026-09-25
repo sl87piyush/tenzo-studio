@@ -2,6 +2,8 @@
 
 **Sample:** 26 September 2026 IST, Google desktop browser at 1280 × 720, `gl=in&hl=en`; Google footer localized the IP to Khema-Ka-Kuwa, Jodhpur, Rajasthan. SERPs change by time, device, location, and personalization. The examples below are observations from one sample, not stable rankings or search-volume estimates. TENZO's rank was not verified. Mobile results remain unmeasured.
 
+In a follow-up browser check for `website design company in jodhpur` (a representative version of the user's website query) and `social media marketing agency jodhpur`, TENZO was not present in the sampled Google results. A separate `site:tenzostudio.com` query **did** return the homepage. The practical diagnosis is weak visibility for non-brand local service intent, not proven site-wide deindexing.
+
 | Query and source | Organic page pattern | Separately observed local pack | TENZO decision |
 |---|---|---|---|
 | [website design company in jodhpur](https://www.google.com/search?q=website+design+company+in+jodhpur&gl=in&hl=en) | Local service pages and city pages, agency homepages, Justdial; examples included Digital Suncity, Adiyogi Technosoft, CssFounder, Kashi Digital Agency, and Websitevale | Teckey Digital Solutions, Digital Suncity, PHEUNIX | Build one detailed website design page rooted in genuine Jodhpur operation, with clear process, scope, and enquiry path |

@@ -31,6 +31,10 @@ export const services = {
     fit: "Useful for clinics, hospitality businesses, consultants, service firms, and founders who want their website to reflect the standard of their work. The final page count and integrations depend on discovery.",
     question: "What should we prepare before a website project?",
     answer: "Bring your current site if you have one, the services you need to explain, existing brand assets, examples of customer questions, and the outcome you want from enquiries. Missing material can be scoped into the project.",
+    moreQuestions: [
+      { question: "How is the cost of a website decided?", answer: "The scope changes with the number and type of pages, content work, design complexity, integrations, and maintenance needs. We review those factors before proposing a price; a fixed quote without a defined brief would be misleading." },
+      { question: "What happens after the site launches?", answer: "We check the agreed pages, contact path, mobile layouts, and search foundations before handover. Any continuing maintenance, analytics, or automation work is defined in the project scope rather than assumed." },
+    ],
     related: ["brand-identity-jodhpur", "product-design-ai-mvps"],
     localService: true,
   },
@@ -66,6 +70,10 @@ export const services = {
     fit: "Useful for founders preparing a launch, established businesses repositioning, and service firms whose current visual presence no longer matches their work.",
     question: "Is this only a logo design project?",
     answer: "No. The identity is defined as a system. A narrower starting scope is possible, but the agreed deliverables must still support consistent use after handover.",
+    moreQuestions: [
+      { question: "Can an existing brand be refined without starting again?", answer: "Yes, if the underlying position still serves the business. We review what people already recognize, identify the gaps, and decide what should be kept, clarified, or redesigned." },
+      { question: "What makes the identity usable after handover?", answer: "The agreed guidelines show how core elements behave across the relevant formats. Application examples make the rules concrete for whoever produces the next website page, campaign asset, or social post." },
+    ],
     related: ["website-design-jodhpur", "visual-motion-design"],
     localService: true,
   },
@@ -101,6 +109,10 @@ export const services = {
     fit: "Useful for service brands, hospitality businesses, founders, and growing teams that need their social presence to express a consistent brand and support a defined commercial goal.",
     question: "Does TENZO offer social media management?",
     answer: "TENZO's growth and social work can include content systems, campaigns, automation, and measurement. Ongoing publishing or channel management should be agreed explicitly in the project scope.",
+    moreQuestions: [
+      { question: "Which social channels should a business use?", answer: "That depends on where the intended audience pays attention, what the business can produce consistently, and which action the channel should support. A smaller, coherent presence can be more useful than posting everywhere." },
+      { question: "When should paid campaigns be part of the plan?", answer: "Paid distribution makes more sense when the offer, landing path, creative, and measurement are ready. We define the campaign objective and review the available budget before recommending a channel or spend." },
+    ],
     related: ["brand-identity-jodhpur", "visual-motion-design"],
     localService: true,
   },

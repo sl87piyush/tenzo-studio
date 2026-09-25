@@ -5,6 +5,12 @@ export const metadata = {
   description: "Meet TENZO STUDIO, founded by Piyush in Jodhpur. We connect visual precision, engineering, and AI thinking across websites, products, and brand systems.",
   alternates: { canonical: "/about/" },
   openGraph: { title: "About TENZO STUDIO", url: "/about/", type: "website" },
+  twitter: {
+    card: "summary_large_image",
+    title: "About TENZO STUDIO | A Digital Studio Based in Jodhpur",
+    description: "Meet TENZO STUDIO, founded by Piyush in Jodhpur. We connect visual precision, engineering, and AI thinking across websites, products, and brand systems.",
+    images: [{ url: "/assets/images/og-home.png", alt: "TENZO STUDIO — Cut the Noise. Set the Standard." }],
+  },
 };
 
 export default function AboutPage() {

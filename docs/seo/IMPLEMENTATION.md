@@ -16,6 +16,8 @@
 - Baseline and post-change `npm run build`: successful static generation. The final build should be repeated after the contact integration and before deployment.
 - Local Playwright production render of the website design page at 1280 px and 390 px. The accessibility snapshot exposed the page's H1, H2/H3 outline, visible service copy, and crawlable links. A light-section label contrast issue found in screenshots was corrected in CSS.
 - `KEYWORD-MATRIX.csv` parsed successfully as 20 rows with 15 columns.
+- A public Google `site:tenzostudio.com` query returned the homepage, while sampled Jodhpur website/social service queries did not show TENZO. The diagnosis and ordered fix are in `INDEX-VISIBILITY-DIAGNOSIS.md`.
+- The final local `npm run build` after adding buyer questions and page-specific social metadata succeeded. Built priority pages have unique titles, headings, descriptions, and self-canonical `www` URLs.
 
 ## Unverified or blocked
 
@@ -24,7 +26,7 @@
 - **GSC/GA4/GBP:** private property status, indexing, traffic, conversions, and Business Profile ownership were not accessible.
 - **Offline eligibility:** “remote and offline” does not say where in-person customer contact occurs. A storefront/service-area decision needs that fact.
 - **Proof:** no approved client portfolio, testimonials, reviews, address, phone, case-study outcomes, or prices were supplied. None were invented.
-- **Performance:** no field CWV values; mobile visual inspection is not a full performance or accessibility audit.
+- **Performance:** no field CWV values; the public PageSpeed Insights request was rate-limited. Mobile visual inspection is not a full performance or accessibility audit.
 - **Old domain:** ownership and relationship of `tenzstudio.com` remain unproven. Do not migrate it without verification.
 
 ## Exact next actions

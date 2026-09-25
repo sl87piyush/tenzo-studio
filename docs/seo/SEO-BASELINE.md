@@ -16,6 +16,8 @@ The site was a single statically rendered homepage at baseline. The public HTML 
 
 No other published content URLs were found in the repository baseline. Private Search Console indexing was not available for confirmation. The new pages in this branch are proposals until deployed.
 
+**Public Google check, 26 September IST:** a `site:tenzostudio.com` search returned the TENZO homepage. This is positive evidence that the homepage is indexed. It does not show the full index inventory or Google-selected canonical; Search Console URL Inspection is still needed. In a Jodhpur desktop Google sample (`gl=in`, `hl=en`, 1280 × 720), TENZO did not appear in the visible result pages for `website design company in jodhpur` or `social media marketing agency jodhpur`. These are observations for that time/location/device, not permanent rank positions.
+
 ## Findings, fixes, ownership, and checks
 
 | Priority | Observation and affected URL | Business effect | Fix / current state | Owner or dependency | Verification |
@@ -35,7 +37,7 @@ No other published content URLs were found in the repository baseline. Private S
 
 - **Core Web Vitals:** no CrUX field values or PageSpeed API credentials. Do not claim LCP, INP, or CLS pass/fail. The thresholds to monitor at the 75th percentile are LCP ≤2.5 s, INP ≤200 ms, CLS ≤0.1.
 - **Mobile/accessibility:** a post-change local desktop and 390 px Playwright render was inspected, but no complete live assistive-technology audit or Lighthouse score was run. Treat as a visual smoke check only.
-- **Indexing and rankings:** Search Console URL Inspection and impressions/clicks were unavailable. Public SERP samples were captured separately, but absence from a sample is not a verified rank position.
+- **Indexing and rankings:** the homepage appeared in a public Google `site:` result, but Search Console URL Inspection, Google-selected canonical, and impressions/clicks were unavailable. Absence from a Jodhpur query sample is not a permanent rank position.
 - **Structured-data rich results:** Organization and Service markup are factual entity descriptions; neither guarantees a rich result.
 - **Backlinks:** no connected backlink dataset; no authority metric or toxic-link conclusion assigned.
 

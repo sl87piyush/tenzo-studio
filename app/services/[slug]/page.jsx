@@ -23,6 +23,12 @@ export async function generateMetadata({ params }) {
       url: path,
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: service.metaTitle,
+      description: service.metaDescription,
+      images: [{ url: "/assets/images/og-home.png", alt: "TENZO STUDIO — Cut the Noise. Set the Standard." }],
+    },
   };
 }
 
@@ -135,6 +141,12 @@ export default async function ServicePage({ params }) {
               {service.local && <p>{service.local}</p>}
               <h3 className="seo-question">{service.question}</h3>
               <p>{service.answer}</p>
+              {service.moreQuestions?.map((item) => (
+                <div key={item.question}>
+                  <h3 className="seo-question">{item.question}</h3>
+                  <p>{item.answer}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
