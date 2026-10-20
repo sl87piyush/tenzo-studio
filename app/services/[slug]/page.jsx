@@ -1,3 +1,7 @@
+import { pageMetadata } from "../../seo";
+import PageHeader from "../../components/PageHeader";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import StudioFooter from "../../components/StudioFooter";
 import { notFound } from "next/navigation";
 import { services, serviceSlugs } from "../service-data";
 import "../services.css";
@@ -13,23 +17,7 @@ export async function generateMetadata({ params }) {
   const service = services[slug];
   if (!service) return {};
   const path = `/services/${slug}/`;
-  return {
-    title: service.metaTitle,
-    description: service.metaDescription,
-    alternates: { canonical: path },
-    openGraph: {
-      title: service.metaTitle,
-      description: service.metaDescription,
-      url: path,
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: service.metaTitle,
-      description: service.metaDescription,
-      images: [{ url: "/assets/images/og-home.png", alt: "TENZO STUDIO — Cut the Noise. Set the Standard." }],
-    },
-  };
+  return pageMetadata({ title: service.metaTitle, description: service.metaDescription, path });
 }
 
 export default async function ServicePage({ params }) {
@@ -50,26 +38,16 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
-      <a className="skip-link" href="#main-content">Skip to content</a>
-      <header className="seo-header">
-        <div className="container seo-header__inner">
-          <a className="seo-header__logo" href="/" aria-label="TENZO STUDIO home">TENZO</a>
-          <nav className="seo-header__nav" aria-label="Main navigation">
-            <a href="/#work">Work</a>
-            <a href="/#capabilities">Services</a>
-            <a href="/about/">Studio</a>
-            <a href="/#start-project">Start a Project <span aria-hidden="true">↗</span></a>
-          </nav>
-        </div>
-      </header>
+      <PageHeader />
 
       <main id="main-content" className="seo-page">
+        <Breadcrumbs name={service.name} path={`/services/${slug}/`} />
         <section className="seo-hero container" aria-labelledby="service-title">
           <p className="seo-kicker">TENZO STUDIO / {service.eyebrow}</p>
           <h1 id="service-title">{service.title}</h1>
           <p className="seo-hero__summary">{service.summary}</p>
           <div className="seo-actions">
-            <a className="button button--primary" href="/#start-project">Define a Project <span aria-hidden="true">↗</span></a>
+            <a className="button button--primary" href="/contact/">Define a Project <span aria-hidden="true">↗</span></a>
             <a className="seo-text-link" href="#scope">Explore the Scope <span aria-hidden="true">↓</span></a>
           </div>
         </section>
@@ -157,7 +135,7 @@ export default async function ServicePage({ params }) {
             <div className="seo-section__body">
               <h2 id="next-title">Define the right scope.</h2>
               <p>Tell us what needs to change, the outcome you need, and the constraints already in view. We will review the brief before recommending a next step.</p>
-              <a className="button button--primary" href="/#start-project">Start a Project <span aria-hidden="true">↗</span></a>
+              <a className="button button--primary" href="/contact/">Start a Project <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </section>
@@ -172,12 +150,7 @@ export default async function ServicePage({ params }) {
         </nav>
       </main>
 
-      <footer className="seo-footer">
-        <div className="container seo-footer__inner">
-          <p>TENZO STUDIO <span>/</span> JODHPUR, INDIA</p>
-          <a href="/">Cut the Noise. Set the Standard.</a>
-        </div>
-      </footer>
+      <StudioFooter showWordmark={false} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
     </>
   );

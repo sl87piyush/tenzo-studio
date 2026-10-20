@@ -2,6 +2,8 @@
 
 Priority weighs business impact, effort, confidence, and dependencies. Numeric growth targets wait until Search Console and enquiry baselines are recorded. “#1” is an aspiration, not a forecast.
 
+**Release update, 26 September 2026 IST:** the seven-page sitemap, `www` canonical alignment, About page, and five service pages are live and publicly reachable. Indexing in Search Console and the form delivery path remain outstanding.
+
 | Window | Work, impact, effort, confidence | Dependency / owner | Success check |
 |---|---|---|---|
 | Days 0–30, P0 | Connect the project form to a verified recipient; **very high lead impact, low–medium effort, high confidence** | Piyush supplies email or endpoint; developer integrates | Valid test brief received; error and success states verified |

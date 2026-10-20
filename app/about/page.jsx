@@ -1,39 +1,28 @@
+import { pageMetadata } from "../seo";
+import { siteConfig } from "../site-config";
+import PageHeader from "../components/PageHeader";
+import Breadcrumbs from "../components/Breadcrumbs";
+import StudioFooter from "../components/StudioFooter";
+import SocialLinks from "../components/SocialLinks";
 import "../services/services.css";
 
-export const metadata = {
-  title: "About TENZO STUDIO | A Digital Studio Based in Jodhpur",
-  description: "Meet TENZO STUDIO, founded by Piyush in Jodhpur. We connect visual precision, engineering, and AI thinking across websites, products, and brand systems.",
-  alternates: { canonical: "/about/" },
-  openGraph: { title: "About TENZO STUDIO", url: "/about/", type: "website" },
-  twitter: {
-    card: "summary_large_image",
-    title: "About TENZO STUDIO | A Digital Studio Based in Jodhpur",
-    description: "Meet TENZO STUDIO, founded by Piyush in Jodhpur. We connect visual precision, engineering, and AI thinking across websites, products, and brand systems.",
-    images: [{ url: "/assets/images/og-home.png", alt: "TENZO STUDIO — Cut the Noise. Set the Standard." }],
-  },
-};
+export const metadata = pageMetadata({
+  title: "About TENZO STUDIO | Piyush Choudhary, Jodhpur",
+  description: "Meet Piyush Choudhary, founder and operator of TENZO STUDIO, an independent design and development studio in Jodhpur. Explore the work and official channels.",
+  path: "/about/",
+});
 
 export default function AboutPage() {
   return (
     <>
-      <a className="skip-link" href="#main-content">Skip to content</a>
-      <header className="seo-header">
-        <div className="container seo-header__inner">
-          <a className="seo-header__logo" href="/" aria-label="TENZO STUDIO home">TENZO</a>
-          <nav className="seo-header__nav" aria-label="Main navigation">
-            <a href="/#work">Work</a>
-            <a href="/#capabilities">Services</a>
-            <a href="/about/" aria-current="page">Studio</a>
-            <a href="/#start-project">Start a Project <span aria-hidden="true">↗</span></a>
-          </nav>
-        </div>
-      </header>
+      <PageHeader current="about" />
       <main id="main-content" className="seo-page">
+        <Breadcrumbs name="About the studio" path="/about/" />
         <section className="seo-hero container">
           <p className="seo-kicker">TENZO STUDIO / JODHPUR, INDIA</p>
-          <h1>Clarity. Craft. Speed. In that order.</h1>
-          <p className="seo-hero__summary">TENZO is a premium digital studio founded by Piyush in Jodhpur. We build digital presence and intelligent systems for businesses that refuse to look average.</p>
-          <div className="seo-actions"><a className="button button--primary" href="/#start-project">Start a Project <span aria-hidden="true">↗</span></a></div>
+          <h1>Independent studio. Direct connection.</h1>
+          <p className="seo-hero__summary">TENZO STUDIO is an independent digital design and development studio based in Jodhpur, Rajasthan, India. Founded and operated by Piyush Choudhary, the studio helps businesses and founders build thoughtful websites, digital products, and web experiences.</p>
+          <div className="seo-actions"><a className="button button--primary" href="/contact/">Start a Project <span aria-hidden="true">↗</span></a></div>
         </section>
         <section className="seo-section seo-section--light">
           <div className="container seo-section__grid">
@@ -49,9 +38,9 @@ export default function AboutPage() {
           <div className="container seo-section__grid">
             <p className="seo-kicker">FOUNDER / 02</p>
             <div className="seo-section__body">
-              <h2>Founded by Piyush.</h2>
-              <p>TENZO operates from Jodhpur, Rajasthan, and works with local businesses, professionals, founders, and growing brands. Its work spans websites and automations, product design and AI MVPs, brand systems, visual and motion design, and growth and social systems.</p>
-              <p>What connects those disciplines is a standard for precise thinking and execution. We define the right scope, remove what does not serve it, and build what the business actually needs.</p>
+              <h2>Founded and operated by Piyush Choudhary.</h2>
+              <p>TENZO is founder-operated and early-stage. Piyush is the direct point of contact for project enquiries and the work. The studio focuses on website development, web applications, UI/UX design, digital experiences, and related technical services. Existing brand, visual, motion and social service scopes are described on their individual pages.</p>
+              <p>Each engagement starts with the problem to solve, the people using the result, and the scope needed to deliver it. The website currently presents conceptual system studies as examples of approach; these are labeled separately from commercial client work.</p>
             </div>
           </div>
         </section>
@@ -68,18 +57,29 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        <section className="seo-section" aria-labelledby="social-title">
+          <div className="container seo-section__grid">
+            <p className="seo-kicker">OFFICIAL CHANNELS</p>
+            <div className="seo-section__body">
+              <h2 id="social-title">Find TENZO elsewhere.</h2>
+              <p>Explore our design work, development projects, and studio updates across our official channels.</p>
+              <SocialLinks mode="full" />
+              <p>Project enquiries go directly to <a className="identity-email" href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.</p>
+            </div>
+          </div>
+        </section>
         <section className="seo-section seo-section--cta">
           <div className="container seo-section__grid">
             <p className="seo-kicker">WORK WITH TENZO / 04</p>
             <div className="seo-section__body">
               <h2>Bring the real problem.</h2>
               <p>Tell us what is changing, where the current system falls short, and what the next phase needs to achieve. We will define the right starting point.</p>
-              <a className="button button--primary" href="/#start-project">Define a Project <span aria-hidden="true">↗</span></a>
+              <a className="button button--primary" href="/contact/">Define a Project <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </section>
       </main>
-      <footer className="seo-footer"><div className="container seo-footer__inner"><p>TENZO STUDIO <span>/</span> JODHPUR, INDIA</p><a href="/">Cut the Noise. Set the Standard.</a></div></footer>
+      <StudioFooter showWordmark={false} />
     </>
   );
 }

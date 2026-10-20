@@ -468,12 +468,12 @@
   display: none;
 }
 
-.no-js .hero__meta-row,
-.no-js .hero__frame,
-.no-js .hero__scanner,
-.no-js .hero__title,
-.no-js .hero__copy,
-.no-js .hero__footer {
+.no-js .hero .hero__meta-row,
+.no-js .hero .hero__frame,
+.no-js .hero .hero__scanner,
+.no-js .hero .hero__title,
+.no-js .hero .hero__copy,
+.no-js .hero .hero__footer {
   opacity: 1;
   transform: none;
 }

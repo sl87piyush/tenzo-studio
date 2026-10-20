@@ -5,6 +5,16 @@
 .seo-header__nav a:hover, .seo-header__nav a:focus-visible, .seo-text-link:hover, .seo-related a:hover { color: var(--text-accent); }
 .seo-header__nav a:last-child { color: var(--text-accent); }
 .seo-page { overflow: clip; }
+.seo-breadcrumbs { padding-top: 2rem; color: var(--text-secondary); font: .75rem/1.6 var(--font-mono); }
+.seo-breadcrumbs ol { display: flex; flex-wrap: wrap; gap: .75rem; }
+.seo-breadcrumbs li + li::before { content: "/"; margin-right: .75rem; }
+.seo-breadcrumbs a { text-decoration: underline; text-underline-offset: .25em; }
+.contact-brief-section { color-scheme: light; --error: #a21b1b; --success: #17643a; --accent-active: #465100; }
+.contact-brief-section .text-secondary { color: #3f3f3d; }
+.contact-brief-section .project-form-wrap { margin-block-start: 2rem; }
+.contact-brief-section .project-form { padding-block-start: 2.5rem; }
+.contact-brief-section .form-control:focus-visible { outline: 2px solid #465100; outline-offset: 3px; }
+.contact-brief-section .form-control::placeholder { color: #60605c; opacity: 1; }
 .seo-kicker { font: 500 .75rem/1.4 var(--font-mono); letter-spacing: .13em; text-transform: uppercase; }
 .seo-hero { min-height: min(74svh, 52rem); display: flex; flex-direction: column; justify-content: center; padding-block: clamp(7rem, 13vw, 12rem); }
 .seo-hero .seo-kicker { margin-bottom: 2rem; color: var(--text-accent); }
@@ -48,14 +58,15 @@
 @media (max-width: 850px) {
   .seo-header__inner { min-height: 4.5rem; }
   .seo-header__nav { gap: .8rem; }
-  .seo-header__nav a:first-child { display: none; }
   .seo-section__grid, .seo-related { grid-template-columns: 1fr; }
   .seo-card-grid { grid-template-columns: 1fr; }
   .seo-card { min-height: 0; }
   .seo-card h3 { margin-top: 1.5rem; }
 }
 @media (max-width: 520px) {
-  .seo-header__nav a:nth-child(2), .seo-header__nav a:nth-child(3) { display: none; }
+  .seo-header__inner { flex-wrap: wrap; gap: 1rem; padding-block: 1rem; }
+  .seo-header__nav { flex-basis: 100%; justify-content: space-between; }
+  .seo-header__nav a { min-height: 44px; display: inline-flex; align-items: center; }
   .seo-hero h1 { font-size: clamp(3rem, 12.5vw, 4.5rem); }
   .seo-steps li { grid-template-columns: 2rem 1fr; }
 }

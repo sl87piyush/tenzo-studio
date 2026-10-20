@@ -16,7 +16,8 @@
     const preloader = document.querySelector("[data-preloader]");
     if (!preloader) return;
 
-    const seen = sessionStorage.getItem("tenzo-preloader-seen");
+    let seen = false;
+    try { seen = sessionStorage.getItem("tenzo-preloader-seen"); } catch { /* Storage can be disabled. */ }
     if (seen || reducedMotion.matches) {
       preloader.hidden = true;
       document.body.classList.remove("is-locked");
@@ -42,7 +43,7 @@
       }
 
       if (status) status.textContent = "STANDARD SET";
-      sessionStorage.setItem("tenzo-preloader-seen", "true");
+      try { sessionStorage.setItem("tenzo-preloader-seen", "true"); } catch { /* The animation does not require storage. */ }
       window.setTimeout(() => {
         preloader.classList.add("is-complete");
         document.body.classList.remove("is-locked");
@@ -106,8 +107,16 @@
           control.setCustomValidity(messages.invalid);
         }
       });
-      control.addEventListener("input", () => control.setCustomValidity(""));
-      control.addEventListener("change", () => control.setCustomValidity(""));
+      function clearValidity() {
+        control.setCustomValidity("");
+        if (control.type === "radio") {
+          form.querySelectorAll('input[type="radio"]').forEach((radio) => {
+            if (radio.name === control.name) radio.setCustomValidity("");
+          });
+        }
+      }
+      control.addEventListener("input", clearValidity);
+      control.addEventListener("change", clearValidity);
     });
 
     form.addEventListener("submit", async (event) => {
@@ -118,7 +127,7 @@
       if (!endpoint) {
         if (status) {
           status.dataset.state = "error";
-          status.textContent = "The brief was not sent. Your details remain in the form. Try again in a moment.";
+          status.textContent = "The form is unavailable. Your brief has not been sent. Please email piyush@tenzostudio.com.";
           status.focus();
         }
         return;
@@ -127,24 +136,32 @@
       submit.disabled = true;
       const originalLabel = submit.querySelector("span");
       if (originalLabel) originalLabel.textContent = "Sending Brief";
+      let failureMessage = "Delivery could not be confirmed. Your details remain in the form. Please email piyush@tenzostudio.com.";
 
       try {
+        const fields = Object.fromEntries(new FormData(form));
+        fields.consent = form.querySelector('[name="consent"]').checked;
         const response = await fetch(endpoint, {
           method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" }
+          body: JSON.stringify(fields),
+          headers: { Accept: "application/json", "Content-Type": "application/json" }
         });
-        if (!response.ok) throw new Error("Submission failed");
+        const result = await response.json();
+        if (!response.ok) {
+          if (typeof result.message === "string") failureMessage = result.message;
+          throw new Error("Submission failed");
+        }
+        if (typeof result.message !== "string") throw new Error("Invalid delivery response");
         form.reset();
         if (status) {
           status.dataset.state = "success";
-          status.textContent = "Brief received. We will review it and respond within one business day with the right next step.";
+          status.textContent = result.message;
           status.focus();
         }
       } catch (error) {
         if (status) {
           status.dataset.state = "error";
-          status.textContent = "The brief was not sent. Your details remain in the form. Try again in a moment.";
+          status.textContent = failureMessage;
           status.focus();
         }
       } finally {

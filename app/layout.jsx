@@ -1,11 +1,14 @@
 import localFont from "next/font/local";
 import TenzoScripts from "./tenzo-scripts";
+import { siteConfig } from "./site-config";
+import { pageMetadata } from "./seo";
 
 import "../css/tokens.css";
 import "../css/reset.css";
 import "../css/global.css";
 import "../css/animations.css";
 import "../css/components.css";
+import "../css/studio-identity.css";
 import "../css/navigation.css";
 import "../css/hero.css";
 import "../css/sections.css";
@@ -22,57 +25,15 @@ const tenzoStudio = localFont({
 
 const title = "TENZO STUDIO | Website Design, Brand Systems & AI in Jodhpur";
 const description =
-  "TENZO STUDIO is a Jodhpur-based digital studio building websites, brand systems, product experiences, and intelligent workflows for ambitious businesses.";
+  "TENZO STUDIO is an independent digital design and development studio in Jodhpur, operated by Piyush Choudhary. Websites, web applications, UI/UX and digital experiences.";
 
 export const metadata = {
-  metadataBase: new URL("https://www.tenzostudio.com"),
-  title,
-  description,
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-    },
-  },
+  ...pageMetadata({ title, description, path: "/" }),
+  metadataBase: new URL(siteConfig.url),
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
   referrer: "strict-origin-when-cross-origin",
-  alternates: {
-    canonical: "/",
-  },
-  icons: {
-    icon: [{ url: "/assets/icons/favicon.svg", type: "image/svg+xml" }],
-  },
+  icons: { icon: [{ url: "/assets/icons/favicon.svg", type: "image/svg+xml" }] },
   manifest: "/site.webmanifest",
-  openGraph: {
-    type: "website",
-    locale: "en_IN",
-    siteName: "TENZO STUDIO",
-    title,
-    description,
-    url: "/",
-    images: [
-      {
-        url: "/assets/images/og-home.png",
-        width: 1200,
-        height: 630,
-        type: "image/png",
-        alt: "TENZO STUDIO — Cut the Noise. Set the Standard.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: [
-      {
-        url: "/assets/images/og-home.png",
-        alt: "TENZO STUDIO — Cut the Noise. Set the Standard.",
-      },
-    ],
-  },
 };
 
 export const viewport = {
@@ -84,25 +45,34 @@ export const viewport = {
 
 const structuredData = {
   "@context": "https://schema.org",
+  "@graph": [{
   "@type": "Organization",
   "@id": "https://www.tenzostudio.com/#organization",
   name: "TENZO STUDIO",
   url: "https://www.tenzostudio.com/",
   description,
   slogan: "Cut the Noise. Set the Standard.",
-  founder: {
-    "@type": "Person",
-    name: "Piyush",
-  },
+  email: siteConfig.email,
+  sameAs: siteConfig.socialProfiles.map((profile) => profile.url),
+  founder: { "@id": `${siteConfig.url}/#founder` },
   location: {
     "@type": "Place",
     name: "Jodhpur, Rajasthan, India",
   },
+  }, {
+    "@type": "Person", "@id": `${siteConfig.url}/#founder`,
+    name: siteConfig.founderName, url: `${siteConfig.url}/about/`,
+    worksFor: { "@id": `${siteConfig.url}/#organization` },
+  }, {
+    "@type": "WebSite", "@id": `${siteConfig.url}/#website`,
+    name: siteConfig.name, url: `${siteConfig.url}/`,
+    publisher: { "@id": `${siteConfig.url}/#organization` },
+  }],
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="js">
+    <html lang="en" className={`${tenzoStudio.variable} no-js`} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -116,7 +86,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body id="top" className={`${tenzoStudio.variable} ${tenzoStudio.className}`}>
+      <body id="top" className={tenzoStudio.className}>
         {children}
         <TenzoScripts />
       </body>

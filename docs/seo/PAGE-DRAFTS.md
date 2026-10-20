@@ -1,6 +1,6 @@
 # First-page copy drafts and factual gates
 
-The complete, publishable first drafts for the three Jodhpur priority pages are in [`app/services/service-data.js`](../../app/services/service-data.js), rendered by the local routes below. The copy uses only the Brand OS service descriptions and the verified Jodhpur operational base. It does not contain client names, reviews, metrics, prices, or a claim that TENZO is a Google Business Profile-eligible local office. The project CTA needs a verified form recipient before deployment.
+The first drafts for the three Jodhpur priority pages are in [`app/services/service-data.js`](../../app/services/service-data.js) and are now live at the routes below. The copy uses only the Brand OS service descriptions and the verified Jodhpur operational base. It does not contain client names, reviews, metrics, prices, or a claim that TENZO is a Google Business Profile-eligible local office. The live project CTA still needs a verified form recipient before it can deliver enquiries.
 
 ## 1. Website design in Jodhpur
 

@@ -48,6 +48,7 @@ body.is-locked {
 }
 
 .skip-link {
+  clip-path: inset(50%);
   position: fixed;
   inset-block-start: var(--space-4);
   inset-inline-start: var(--space-4);
@@ -60,6 +61,7 @@ body.is-locked {
 }
 
 .skip-link:focus {
+  clip-path: none;
   transform: translateY(0);
 }
 

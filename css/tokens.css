@@ -49,9 +49,9 @@
   --scrim-full: linear-gradient(180deg, rgba(10, 10, 11, 0.12) 0%, rgba(10, 10, 11, 0.68) 100%);
 
   /* Font stack */
-  --font-heading: var(--font-tenzo-studio), "Tenzo Studio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: var(--font-tenzo-studio, "Tenzo Studio"), "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-display: var(--font-heading);
-  --font-body: var(--font-tenzo-studio), "Tenzo Studio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: var(--font-tenzo-studio, "Tenzo Studio"), "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 
   /* Type scale */
